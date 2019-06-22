@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org/">
+<head th:replace="fragments :: head"></head>
+<body class="container">
+<h1 th:text="${title}">Default Title</h1>
+<nav th:replace="fragments :: navigation"></nav>
+
+<!--The handler should render the index.html template that you just created.
+This view should display an unordered list (that is, a <ul>) of category names.
+The list will look a bit plain for now, but we will make it more interesting later on-->
+
+    <ul><div th:each="category : ${categories}">
+        <li th:text="${category.name}"></li></div>
+    </ul>
+
+    <a href="/category/add">Add Category</a>
+
+</body>
+</html>
