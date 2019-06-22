@@ -24,6 +24,7 @@ public class MenuController {
 
     @Autowired
     private MenuDao menuDao;
+    @Autowired
     private CheeseDao cheeseDao;
 
     @RequestMapping("")
